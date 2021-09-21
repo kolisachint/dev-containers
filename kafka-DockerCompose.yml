@@ -11,7 +11,7 @@ services:
     volumes:
       - /Users/sachinkoli/appl/my-secrets:/my-secrets
     environment:
-      GIT_SRC: git@github.com:kolisachint/rest-api-example.git
+      GIT_SRC: git@github.com:kolisachint/fastapi-example.git
     networks: 
       - python-dev-network
 
@@ -19,4 +19,3 @@ networks:
   python-dev-network:
 
 
-# docker-compose -f python3.9-DockerCompose.yml up 
