@@ -18,7 +18,4 @@ ENTRYPOINT ["/opt/buildimg/scripts/python3.9-entrypoint.sh"]
 
 EXPOSE 5000 8080 80 443
 
-# docker build . -t python3.9:ubuntu20.04 -f python3.9-Dockerfile
-# docker build . --no-cache -t python3.9:ubuntu20.04 -f python3.9-Dockerfile
-# docker tag python3.9:ubuntu20.04 kolisachint/python3.9:ubuntu20.04
-# docker push kolisachint/python3.9:ubuntu20.04
+

@@ -18,5 +18,3 @@ services:
 networks:
   python-dev-network:
 
-
-# docker-compose -f python3.9-DockerCompose.yml up 

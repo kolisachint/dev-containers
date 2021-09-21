@@ -1,0 +1,21 @@
+version: "3.8"
+    
+services:
+  jupyter:
+#    build: 
+#      context: .
+#      dockerfile: python3.9-Dockerfile
+    image: jupyter/minimal-notebook:latest
+    ports: 
+      - 58888:8888
+    volumes:
+      - /Users/sachinkoli/appl/my-secrets:/my-secrets
+      - /Users/sachinkoli/appl/jupyter-notebooks:/home/jovyan/jupyter-notebooks
+#    environment:
+#      $(pwd):/appl/jupyter-notebooks
+    networks: 
+      - jupyter-dev-network
+
+networks:
+  jupyter-dev-network:
+
