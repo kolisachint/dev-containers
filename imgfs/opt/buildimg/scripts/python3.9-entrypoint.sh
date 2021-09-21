@@ -19,5 +19,9 @@ if [ -e "requirements.txt" ]; then
       install -r requirements.txt
 fi
 
+if [ -e "main.py" ]; then
+    python3 main.py
+fi
+
 tail -f /dev/null
 

@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.8"
     
 services:
   python3.9:
@@ -7,11 +7,16 @@ services:
       dockerfile: python3.9-Dockerfile
     image: python3.9:ubuntu20.04 
     ports: 
-      - "80:5000"
+      - 8080:5000
     volumes:
       - /Users/sachinkoli/appl/my-secrets:/my-secrets
     environment:
       GIT_SRC: git@github.com:kolisachint/rest-api-example.git
+    networks: 
+      - python-dev-network
+
+networks:
+  python-dev-network:
 
 
 # docker-compose -f python3.9-DockerCompose.yml up 
