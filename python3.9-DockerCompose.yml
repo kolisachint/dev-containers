@@ -7,7 +7,10 @@ services:
       dockerfile: python3.9-Dockerfile
     image: python3.9:ubuntu20.04 
     ports: 
-      - 8080:5000
+      - 55000:5000
+      - 58080:8080
+      - 50080:80
+      - 50443:443
     volumes:
       - /Users/sachinkoli/appl/my-secrets:/my-secrets
     environment:
