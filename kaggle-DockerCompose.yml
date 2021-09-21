@@ -1,0 +1,20 @@
+version: "3.8"
+    
+services:
+  kaggle:
+#    build: 
+#      context: .
+#      dockerfile: python3.9-Dockerfile
+    image: gcr.io/kaggle-images/python
+    ports: 
+      - 58888:8888
+    volumes:
+      - /Users/sachinkoli/appl/kaggle-notebooks:/appl/kaggle-notebooks
+    environment:
+      notebook-dir: /appl/kaggle-notebooks
+    networks: 
+      - kaggle-dev-network
+
+networks:
+  kaggle-dev-network:
+

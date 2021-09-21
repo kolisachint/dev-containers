@@ -9,10 +9,9 @@ services:
     ports: 
       - 58888:8888
     volumes:
-      - /Users/sachinkoli/appl/my-secrets:/my-secrets
       - /Users/sachinkoli/appl/jupyter-notebooks:/home/jovyan/jupyter-notebooks
-#    environment:
-#      $(pwd):/appl/jupyter-notebooks
+    environment:
+      notebook-dir: /appl/jupyter-notebooks
     networks: 
       - jupyter-dev-network
 
