@@ -5,9 +5,9 @@ services:
 #    build: 
 #      context: .
 #      dockerfile: python3.9-Dockerfile
-    image: jupyter/minimal-notebook:latest
+    image: jupyter/minimal-notebook:lab-3.1.12
     ports: 
-      - 58888:8888
+      - 58889:8889
     volumes:
       - /Users/sachinkoli/appl/jupyter-notebooks:/home/jovyan/jupyter-notebooks
     environment:
