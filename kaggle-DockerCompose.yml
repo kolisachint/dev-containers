@@ -5,7 +5,7 @@ services:
 #    build: 
 #      context: .
 #      dockerfile: python3.9-Dockerfile
-    image: gcr.io/kaggle-images/python
+    image: gcr.io/kaggle-images/python:v104
     ports: 
       - 58888:8888
     volumes:
