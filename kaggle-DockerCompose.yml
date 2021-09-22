@@ -4,14 +4,13 @@ services:
   kaggle:
 #    build: 
 #      context: .
-#      dockerfile: python3.9-Dockerfile
+#      dockerfile: Dockerfile
     image: gcr.io/kaggle-images/python:v104
     ports: 
       - 58080:8080
     volumes:
       - /Users/sachinkoli/appl/kaggle-notebooks:/home/jupyter/kaggle-notebooks
-    environment:
-      notebook-dir: /appl/kaggle-notebooks
+      - /Users/sachinkoli/appl/my-secrets/kaggle.json:/root/.kaggle/kaggle.json
     networks: 
       - kaggle-dev-network
 

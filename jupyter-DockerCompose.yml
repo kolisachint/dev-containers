@@ -4,7 +4,7 @@ services:
   jupyter:
 #    build: 
 #      context: .
-#      dockerfile: python3.9-Dockerfile
+#      dockerfile: Dockerfile
     image: jupyter/minimal-notebook:lab-3.1.12
     ports: 
       - 58889:8889
