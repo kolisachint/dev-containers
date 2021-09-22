@@ -7,9 +7,9 @@ services:
 #      dockerfile: python3.9-Dockerfile
     image: gcr.io/kaggle-images/python:v104
     ports: 
-      - 58888:8888
+      - 58080:8080
     volumes:
-      - /Users/sachinkoli/appl/kaggle-notebooks:/appl/kaggle-notebooks
+      - /Users/sachinkoli/appl/kaggle-notebooks:/home/jupyter/kaggle-notebooks
     environment:
       notebook-dir: /appl/kaggle-notebooks
     networks: 
