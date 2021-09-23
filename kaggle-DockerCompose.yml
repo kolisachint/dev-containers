@@ -7,11 +7,11 @@ services:
       dockerfile: kaggle-Dockerfile
     image: kaggle-images/python
     ports: 
-      - 58080:8080
       - 58888:8888
+      - 58889:8889
     volumes:
       - /Users/sachinkoli/appl/kaggle-notebooks:/appl/kaggle-notebooks
-      - /Users/sachinkoli/appl/my-secrets/kaggle.json:/root/.kaggle/kaggle.json
+      - /Users/sachinkoli/appl/my-secrets/kaggle.json:/home/jovyan/.kaggle/kaggle.json
     networks: 
       - kaggle-dev-network
 

@@ -1,15 +1,11 @@
-FROM ubuntu:20.04
+FROM jupyter/minimal-notebook:lab-3.1.12
+USER root
 
-RUN export DEBIAN_FRONTEND=noninteractive && apt-get update  \
-  && apt-get -y install --no-install-recommends \
-        python3.9-minimal python3-pip python3-dev git ssh \
-  && pip install --upgrade pip \
-  && pip --disable-pip-version-check --no-cache-dir install \
-        jupyterlab \
-        tensorflow--aarch64 -f  \
-        kaggle kaggle-environments \
-  && apt-get autoremove -y && apt-get clean -y  \
-  && rm -rf /var/lib/apt/lists/*  \
+RUN pip --disable-pip-version-check --no-cache-dir install \
+        kaggle kaggle-environments 
+
+RUN apt-get autoremove -y && apt-get clean -y  \
+    && rm -rf /var/lib/apt/lists/*  \
         /tmp/* \
         /var/tmp/* \
         /usr/share/man \
@@ -17,7 +13,9 @@ RUN export DEBIAN_FRONTEND=noninteractive && apt-get update  \
         /usr/share/doc-base \
         /usr/local/src/* 
 
-EXPOSE 8888
+WORKDIR /appl/kaggle-notebooks
 
-ENTRYPOINT ["jupyter", "lab"]
+EXPOSE 8888 8889
+
+ENTRYPOINT ["jupyter", "lab","--NotebookApp.token=''","--allow-root"]
 
