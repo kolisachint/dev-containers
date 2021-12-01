@@ -5,11 +5,12 @@ services:
 #    build: 
 #      context: .
 #      dockerfile: python3.9-Dockerfile
-    image: python3.9:ubuntu20.04 
+    image: kolisachint/python3.9:ubuntu20.04 
     ports: 
-      - 55000:5000
+      - 55003:5000
     volumes:
       - /Users/sachinkoli/appl/my-secrets:/my-secrets
+      - /Users/sachinkoli/appl/data:/appl/
     environment:
       GIT_SRC: git@github.com:kolisachint/faker-to-csv.git
     networks: 
